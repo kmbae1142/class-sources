@@ -1,2 +1,4 @@
 # class-sources
-바이브코딩 수업 예제
+
+vibe coding 수업 예제
+
