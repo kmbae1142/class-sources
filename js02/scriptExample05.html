@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="score" placeholder="성적을 입력하세요" autocomplete="off">
+    <button type="button" onclick="getResult();">결과 확인</button>
+    <p>결과 : <span id="result"></span></p>
+</body>
+<script>
+    const getResult = () => {
+        let status = '';
+
+        const score = document.querySelector('#score').value;
+
+        if (score >= 65) {
+            status = '합격';
+        }
+        else {
+            status = '불합격';
+        }
+
+        const spanResult = document.querySelector('#result');
+        spanResult.textContent = status;
+    }
+</script>
+</html>

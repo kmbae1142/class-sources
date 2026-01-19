@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding & Box-sizing 예제</title>
+    <style>
+        .parentDiv1 {
+            width: 300px;
+            height: 400px;
+            background-color: lightgray;
+            padding: 10px;
+            float: left;
+            margin-right: 20px;
+        }
+        .parentDiv2 {
+            width: 300px;
+            height: 400px;
+            background-color: lightgray;
+            padding: 20px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .childDiv1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .childDiv2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h3>padding: 10px (기본 box-sizing)</h3>
+    <div class="parentDiv1">
+        <div class="childDiv1">childDiv1</div>
+        <div class="childDiv2">childDiv2</div>
+    </div>
+
+    <h3>padding: 20px (box-sizing: border-box)</h3>
+    <div class="parentDiv2">
+        <div class="childDiv1">childDiv1</div>
+        <div class="childDiv2">childDiv2</div>
+    </div>
+</body>
+</html>

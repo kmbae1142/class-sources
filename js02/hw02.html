@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .canvas {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            width: 400px;
+            height: 600px;
+            border: 1px solid;
+            overflow: auto;
+        }
+
+        /* 텍스트를 정중앙으로 옮기기 위해 flex display 를 사용함 */
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas" id="canvas"></div>
+    <div>
+        <button type="button" onclick="makeBox()">뽑기</button>
+    </div>
+</body>
+<script>
+    const makeBox = () => {
+        /**
+         * result: 랜덤하게 뽑은 수들을 저장할 배열
+         * isSelected: 각 숫자가 뽑혔는지 여부를 true/false로 저장 (index = 숫자)
+         * i: 뽑은 횟수
+        */
+        let result = new Array(5).fill(0);
+        let isSelected = new Array(11).fill(false);
+        let i = 0;
+
+        // 숫자 중복 없이 5번 뽑기
+        while (i < 5) {
+            const randomNum = Math.floor(Math.random() * 10) + 1;
+            /**
+             * 만일 아직 뽑히지 않은 숫자라면 뽑은 수를 result 배열에 저장하고,
+             * 뽑혔으니 숫자와 같은 index의 값을 true 로 바꿔주고, 뽑은 횟수에
+             * 1을 더한다.
+            */
+            if (!isSelected[randomNum]) {
+                result[i] = randomNum;
+                isSelected[randomNum] = true;
+                i++;
+            }
+        }
+
+        const canvas = document.querySelector('#canvas');
+        canvas.innerHTML = '';
+
+        for (let i = 0; i < 5; i++) {
+            const div = document.createElement('div');
+            div.className = 'item';
+            div.textContent = result[i];
+            canvas.append(div);
+        }
+    }
+</script>
+</html>

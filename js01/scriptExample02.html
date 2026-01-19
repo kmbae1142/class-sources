@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        이름 : <span id="name"></span>
+    </div>
+    
+</body>
+<script>
+    function PrintName(name) {
+        //const span = document.getElementById('name');       const span = document.getElementById('name');
+        const spanName = document.querySelector('#name');
+        spanName.innerText = name;
+    }
+
+    PrintName('ggg')
+</script>
+</html>

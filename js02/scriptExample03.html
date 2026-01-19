@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>요금 : <span id="fee"></span></p>
+    <p>대상 : <span id="type"></span></p>
+    <input type="number" id="age" placeholder="나이를 입력하세요" autocomplete="off">
+    <button type="button" onclick="getFee();">계산</button>
+</body>
+<script>
+    // 일반 함수(생성 시 메모리 등록)
+    // 공통함수
+    function getFee() {
+
+    }
+
+    // 익명 함수(실행할 때 메모리 등록)
+    // 이벤트 처리, 콜백 등
+    const getFee = function() {
+
+    }
+
+    // arrow function
+    const getFee = () => {
+
+    }
+
+    const getFee = () => console.log("hello");
+    const getFee = fee => console.log(fee);
+
+</script>
+</html>

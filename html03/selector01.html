@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id 선택자 */
+        #div1 {
+            background-color: red;
+        }
+
+        /* 우선순위 id > name */
+        div[name="div"] {
+            background-color: blue;
+        }
+
+        /* class 선택자 */
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        /* 선택자 우선순위 id > class > name > tag */
+
+    </style>
+</head>
+<body>
+    <div id="div1" name="div">div1</div>
+    <div id="div2" name="div">div2</div>
+    <div id="div3" class="green">div3</div>
+</body>
+</html>
