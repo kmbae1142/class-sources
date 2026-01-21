@@ -1,4 +1,4 @@
-const API_KEY = 'eb3a3f5257647e4adf2cc4690798b08e'; // API 키를 여기에 입력하세요
+const API_KEY = 'KEY'; // API 키를 여기에 입력하세요
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const cityInput = document.getElementById('cityInput');
